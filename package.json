@@ -1,0 +1,16 @@
+{
+  "name": "northland-music-festival",
+  "version": "1.0.0",
+  "description": "Lineup Manager - WEBD2006 Assignment 2",
+  "scripts": {
+    "test": "jest"
+  },
+  "jest": {
+    "testMatch": [
+      "**/automated_tests_do_not_touch/**/*.test.js"
+    ]
+  },
+  "devDependencies": {
+    "jest": "^29.0.0"
+  }
+}
