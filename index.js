@@ -66,6 +66,8 @@ function displayArtist(name, genre, time) {
   const formattedTime = formatTime(time);
   return `${name} | ${genre} | ${formattedTime}`;
 }
+
+console.log(displayArtist("The Rolling Clones", "Rock", 2000)); // Example usage
 // ------------------------------------
 // Task 2: filterByGenre
 // ------------------------------------
@@ -77,13 +79,7 @@ function displayArtist(name, genre, time) {
 
 // YOUR CODE HERE
 
-function filterByGenre(genre) {
-  for (let i = 0; i < artistNames.length; i++) {
-    if (genres[i] === genre) {
-      console.log(artistNames[i]);
-    }
-  }
-}
+
 // ------------------------------------
 // Task 3: findHeadliner
 // ------------------------------------
@@ -96,19 +92,8 @@ function filterByGenre(genre) {
 
 // YOUR CODE HERE
 
-function findHeadliner() {
-  let latestTime = 0;
-  let headlinerIndex = 0;
 
-  for (let i = 0; i < stageTimes.length; i++) {
-    if (stageTimes[i] > latestTime) {
-      latestTime = stageTimes[i];
-      headlinerIndex = i;
-    }
-  }
-
-  return artistNames[headlinerIndex];
-}
+ 
 
 // ------------------------------------
 // Task 4: buildSetList
@@ -125,33 +110,20 @@ function findHeadliner() {
 
 // YOUR CODE HERE
 
-function buildSetList() {
-  const setList = [];
 
-  for (let i = 0; i < artistNames.length; i++) {
-    const formattedArtist = displayArtist(artistNames[i], genres[i], stageTimes[i]);
-    setList.push(formattedArtist);
-  }
-
-  console.log("--- Full Set List ---");
-  for (const artist of setList) {
-    console.log(artist);
-  }
-}
 
 // ------------------------------------
 // Main Function
 // ------------------------------------
 
-function main() {
-  // TODO 1: Call displayArtist for The Beagles and log the result
-  // TODO 2: Call filterByGenre to display all "Folk" artists
-  // TODO 3: Call findHeadliner and log a message in this format:
-  //         "Tonight's headliner is: [artist name]"
-  // TODO 4: Call buildSetList to display the full set list
-}
 
-main();
+// TODO 1: Call displayArtist for The Beagles and log the result
+// TODO 2: Call filterByGenre to display all "Folk" artists
+// TODO 3: Call findHeadliner and log a message in this format:
+//         "Tonight's headliner is: [artist name]"
+// TODO 4: Call buildSetList to display the full set list
+
+
 
 // ============================================
 // DO NOT CHANGE THE FOLLOWING LINES
