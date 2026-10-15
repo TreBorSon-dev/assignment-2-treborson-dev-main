@@ -79,7 +79,15 @@ console.log(displayArtist("The Rolling Clones", "Rock", 2000)); // Example usage
 
 // YOUR CODE HERE
 
+function filterByGenre(genre) {
+  for (let i = 0; i < artistNames.length; i++) {
+    if (genres[i] === genre) {
+      console.log(artistNames[i]); 
+    }
+  }
+}
 
+console.log(filterByGenre("Pop")); // Example usage
 // ------------------------------------
 // Task 3: findHeadliner
 // ------------------------------------
