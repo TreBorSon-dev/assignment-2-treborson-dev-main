@@ -130,7 +130,21 @@ console.log(findHeadliner()); // Example usage
 
 // YOUR CODE HERE
 
+function buildSetList() {
+  const setList = [];
 
+  for (let i = 0; i < artistNames.length; i++) {
+    const formattedArtist = displayArtist(artistNames[i], genres[i], stageTimes[i]);
+    setList.push(formattedArtist);
+  }
+
+  console.log("--- Full Set List ---");
+  for (const artist of setList) {
+    console.log(artist);
+  }
+}
+
+buildSetList(); // Example usage 
 
 // ------------------------------------
 // Main Function
