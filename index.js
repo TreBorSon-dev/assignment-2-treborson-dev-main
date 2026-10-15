@@ -87,7 +87,7 @@ function filterByGenre(genre) {
   }
 }
 
-console.log(filterByGenre("Pop")); // Example usage
+filterByGenre("Pop"); // Example usage
 // ------------------------------------
 // Task 3: findHeadliner
 // ------------------------------------
@@ -100,9 +100,21 @@ console.log(filterByGenre("Pop")); // Example usage
 
 // YOUR CODE HERE
 
+function findHeadliner() {
+  let latestTime = stageTimes[0];
+  let latestIndex = 0;
 
- 
+  for (let i = 1; i < stageTimes.length; i++) {
+    if (stageTimes[i] > latestTime) {
+      latestTime = stageTimes[i];
+      latestIndex = i;
+    }
+  }
 
+  return artistNames[latestIndex];
+}
+
+console.log(findHeadliner()); // Example usage
 // ------------------------------------
 // Task 4: buildSetList
 // ------------------------------------
